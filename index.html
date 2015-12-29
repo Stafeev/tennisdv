@@ -31,12 +31,26 @@
     <script src="js/app.js"></script>
     <!-- Google Maps -->
     <script src="http://maps.googleapis.com/maps/api/js"></script> 
-   
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script>
+        $(function() {
+            console.log("called");
+            var mq = window.matchMedia( "(max-width: 868px)" );
+            if (mq.matches) {
+                console.log("changed");
+                $("#fedHeader").html("TennisDV");
+            }
+            else {
+                
+            }
+        });
+    </script>
     <style>
          /* For mobile phones: */
     @media only screen and (max-width: 868px) {
     #fedHeader {
-          font-weight: 400 !important;
+          font-weight: 200 !important;
         }
     }
         @media only screen and (min-width: 868px) {
@@ -46,6 +60,7 @@
         }
     }
     </style>
+   
   </head>
   <body>
   
@@ -67,11 +82,11 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a ui-sref="index">Информация</a></li>
-                    <li><a ui-sref="competition">Соревнования</a></li>
-                    <li><a ui-sref="groups">Запись в секцию</a></li>
-                    <li><a ui-sref="news">Новости</a></li>
-                    <li><a ui-sref="contacts">Контакты</a></li>
+                    <li><a data-toggle="collapse" data-target=".navbar-collapse" ui-sref="index">Информация</a></li>
+                    <li><a data-toggle="collapse" data-target=".navbar-collapse" ui-sref="competition">Соревнования</a></li>
+                    <li><a data-toggle="collapse" data-target=".navbar-collapse" ui-sref="groups">Запись в секцию</a></li>
+                    <li><a data-toggle="collapse" data-target=".navbar-collapse" ui-sref="news">Новости</a></li>
+                    <li><a data-toggle="collapse" data-target=".navbar-collapse" ui-sref="contacts">Контакты</a></li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -150,8 +165,6 @@
 
 
 		</footer>
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
   </body>
