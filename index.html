@@ -35,10 +35,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script>
         $(function() {
-            console.log("called");
             var mq = window.matchMedia( "(max-width: 868px)" );
             if (mq.matches) {
-                console.log("changed");
                 $("#fedHeader").html("TennisDV");
             }
             else {
@@ -50,7 +48,7 @@
          /* For mobile phones: */
     @media only screen and (max-width: 868px) {
     #fedHeader {
-          font-weight: 200 !important;
+          font-weight: 500 !important;
         }
     }
         @media only screen and (min-width: 868px) {
