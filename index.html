@@ -39,6 +39,16 @@
             var mq = window.matchMedia( "(max-width: 868px)" );
             if (mq.matches) {
                 $("#fedHeader").html("TennisDV");
+                var href = document.getElementsByClassName("menuhref");
+                var i;
+                for (i = 0; i < href.length; i++) {
+                    var att1 = document.createAttribute("data-toggle"); 
+                    var att2 = document.createAttribute("data-target"); 
+                    att1.value = "collapse"; 
+                    att1.value = ".navbar-collapse"; 
+                    href[i].setAttributeNode(att1);
+                    href[i].setAttributeNode(att2);
+                }
             }
             else {
                 
@@ -81,11 +91,11 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a data-toggle="collapse" data-target=".navbar-collapse" ui-sref="index">Информация</a></li>
-                    <li><a data-toggle="collapse" data-target=".navbar-collapse" ui-sref="competition">Соревнования</a></li>
-                    <li><a data-toggle="collapse" data-target=".navbar-collapse" ui-sref="groups">Запись в секцию</a></li>
-                    <li><a data-toggle="collapse" data-target=".navbar-collapse" ui-sref="news">Новости</a></li>
-                    <li><a data-toggle="collapse" data-target=".navbar-collapse" ui-sref="contacts">Контакты</a></li>
+                    <li><a class="menuhref" ui-sref="index">Информация</a></li>
+                    <li><a class="menuhref" ui-sref="competition">Соревнования</a></li>
+                    <li><a class="menuhref" ui-sref="groups">Запись в секцию</a></li>
+                    <li><a class="menuhref" ui-sref="news">Новости</a></li>
+                    <li><a class="menuhref" ui-sref="contacts">Контакты</a></li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
