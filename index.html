@@ -42,12 +42,8 @@
                 var href = document.getElementsByClassName("menuhref");
                 var i;
                 for (i = 0; i < href.length; i++) {
-                    var att1 = document.createAttribute("data-toggle"); 
-                    var att2 = document.createAttribute("data-target"); 
-                    att1.value = "collapse"; 
-                    att1.value = ".navbar-collapse"; 
-                    href[i].setAttributeNode(att1);
-                    href[i].setAttributeNode(att2);
+                    href[i].setAttribute("data-toggle","collapse");
+                    href[i].setAttribute("data-target",".navbar-collapse");
                 }
             }
             else {
