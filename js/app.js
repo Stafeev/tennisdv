@@ -13,7 +13,7 @@ var myapp = angular.module('myapp', ["ui.router"])
             url: "/competition",
             views: {
                 "viewA": {
-                    templateUrl: "templates/competition.html"
+                    templateUrl: "templates/news.html"
                 }
             }
         })
@@ -29,7 +29,7 @@ var myapp = angular.module('myapp', ["ui.router"])
             url: "/news",
             views: {
                 "viewA": {
-                    templateUrl: "templates/news.html"
+                    templateUrl: "templates/competition.html"
                 }
             }
         })
